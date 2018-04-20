@@ -1,5 +1,5 @@
 import * as types from './types'
-import Api from '../lib/api'
+import Api from '../libs/api'
 
 export function fetchRecipes(ingredients) {
   return (dispatch, getState) => {

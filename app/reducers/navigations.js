@@ -1,13 +1,13 @@
 import ReactNative from 'react-native';
 const { NavigationExperimental, StatusBar} = ReactNative;
 import * as types from '../actions/types'
-import createReducer from '../lib/createReducer'
-import ApplicationTabs from '../containers/ApplicationTabs'
-import Detail from '../containers/Detail'
+import createReducer from '../libs/createReducer'
+// import ApplicationTabs from '../containers/ApplicationTabs'
+// import Detail from '../containers/Detail'
 
 const {
-    CardStack: NavigationCardStack,
-    StateUtils: NavigationStateUtils
+    // CardStack: NavigationCardStack,
+    // StateUtils: NavigationStateUtils
 } = NavigationExperimental
 
 const allTabs = [
@@ -23,18 +23,18 @@ export const tabs = createReducer({ index: 0, key: 'home', routes: allTabs }, {
 
 export const navigationState = createReducer({ index: 0,
     routes: [
-        { key: 'ApplicationTabs',  },
-        { key: 'Detail' },
+        // { key: 'ApplicationTabs',  },
+        // { key: 'Detail' },
     ]
 }, {
 
-    [types.NAVIGATION_FORWARD](state, action) {
-        return NavigationStateUtils.forward(state);
-    },
-
-    [types.NAVIGATION_BACK](state, action) {
-        return NavigationStateUtils.back(state);
-    },
+    // [types.NAVIGATION_FORWARD](state, action) {
+    //     return NavigationStateUtils.forward(state);
+    // },
+    //
+    // [types.NAVIGATION_BACK](state, action) {
+    //     return NavigationStateUtils.back(state);
+    // },
 
 });
 
